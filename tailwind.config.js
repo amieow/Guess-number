@@ -4,8 +4,11 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
     './src/app/**/*.{js,ts,jsx,tsx}',
+<<<<<<< HEAD
     "**/*.ts",
     "**/*.tsx"
+=======
+>>>>>>> d0dab96 (first commit)
   ],
   theme: {
     extend: {

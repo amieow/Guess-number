@@ -1,11 +1,15 @@
 {
   "compilerOptions": {
     "target": "es5",
+<<<<<<< HEAD
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
+=======
+    "lib": ["dom", "dom.iterable", "esnext"],
+>>>>>>> d0dab96 (first commit)
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -24,6 +28,7 @@
       }
     ],
     "paths": {
+<<<<<<< HEAD
       "@/*": [
         "./src/*"
       ]
@@ -40,3 +45,11 @@
     "node_modules"
   ]
 }
+=======
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/component/ClientComponent.js"],
+  "exclude": ["node_modules"]
+}
+>>>>>>> d0dab96 (first commit)
