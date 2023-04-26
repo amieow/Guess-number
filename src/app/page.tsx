@@ -23,6 +23,7 @@ const Page = () => {
   return (
     <>
     <Hero/>
+    <Service/>
     </>
 
   );
