@@ -1,4 +1,19 @@
+<<<<<<< HEAD
 
 node_modules
 .next
 .github
+=======
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+/.next/
+
+/.vscode
+
+/README.md
+>>>>>>> 745fd80 (add git ignore)
