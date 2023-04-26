@@ -7,13 +7,8 @@ node_modules
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
-/.pnp
-.pnp.js
+node_modules
+.next
+.vscode
+README.md
 
-/.next/
-
-/.vscode
-
-/README.md
->>>>>>> 745fd80 (add git ignore)

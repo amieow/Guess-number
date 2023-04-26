@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import Hero from '@/component/hero'
 import './globals.css'
@@ -26,6 +27,9 @@ export default function RootLayout({
 import ClientComponent from './component/ClientComponent'
 import Hero from './component/hero'
 import Service from './component/services'
+=======
+
+>>>>>>> 8be5a3a (update)
 import './globals.css'
 export const metadata = {
   title: 'Create Next App',
