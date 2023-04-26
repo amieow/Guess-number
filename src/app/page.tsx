@@ -1,15 +1,15 @@
+'use client';
 
+import Service from "@/component/services";
 
 const Page = () => {
   return (
     <>
       
       <Service/>
-
     </>
 
   );
 };
 
 export default Page;
->>>>>>> d0dab96 (first commit)
