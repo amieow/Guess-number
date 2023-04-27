@@ -5,10 +5,8 @@ import Service from "@/component/services";
 const Page = () => {
   return (
     <>
-      
       <Service/>
     </>
-
   );
 };
 
