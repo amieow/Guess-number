@@ -1,17 +1,16 @@
 "use client";
 
+import { jenisProject } from "@/app/asset/data";
 import dynamic from "next/dynamic";
-const Header = dynamic(() => import("./header"));
-import ServerComponent from "./serverComponent";
-const Hero = () => {
+import Image from "next/image";
+import { useState } from "react";
+
+function Project() {
+    const [showContent, setShowContent] = useState(0);
     return (
-        <section
-            id="hero"
-            className="bg-[#0C111F] h-screen min-h-full scroll-smooth"
-        >
-            <Header />
+        <section id="project" className=" bg-gray-900 h-full min-h-screen pb-8">
             <svg
-                className="absolute z-0 min-[1440px]:hidden"
+                className="absolute object-cover z-0 min-[1440px]:hidden rotate-180"
                 width="100%"
                 height="100%"
                 viewBox="0 0 375 706"
@@ -71,9 +70,9 @@ const Hero = () => {
                 </defs>
             </svg>
             <svg
-                className="hidden min-[1440px]:mx-auto absolute min-[1440px]:block"
+                className="hidden object-cover absolute rotate-180 min-[1440px]:block"
                 width="100%"
-                height="1120"
+                height="100%"
                 viewBox="0 0 1440 1120"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -145,40 +144,90 @@ const Hero = () => {
                     </linearGradient>
                 </defs>
             </svg>
-
-            <ServerComponent>
-                <div className="bg-white z-10 bg-opacity-10 p-2 w-[262px] mx-auto rounded-[100px] mt-2 mb-2 transition-all 975:w-fit 975:px-4 975:py-3">
-                    <p className="text-white text-center tracking-[1px] text-[10px] font-['Inter'] font-medium leading-[18px] 975:text-sm">
-                        NUMBER ONE CREATIVE DIGITAL AGENCY
+            <svg
+                className="absolute object-cover rotate-180 z-0"
+                width="100%"
+                height="30%"
+                viewBox="0 0 222 245"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    opacity="0.2"
+                    d="M117.27 450.992C231.742 520.829 381.154 484.646 450.992 370.174C520.829 255.702 484.646 106.29 370.174 36.4521C255.702 -33.3855 106.29 2.79784 36.4522 117.27C-33.3854 231.742 2.79793 381.154 117.27 450.992ZM310.924 133.571C371.758 170.685 390.988 250.089 353.873 310.923C316.759 371.758 237.355 390.988 176.52 353.873C115.686 316.759 96.4563 237.355 133.571 176.52C170.685 115.685 250.089 96.4562 310.924 133.571Z"
+                    fill="url(#paint0_linear_171_1385)"
+                />
+                <defs>
+                    <linearGradient
+                        id="paint0_linear_171_1385"
+                        x1="577.027"
+                        y1="459.631"
+                        x2="-90.0001"
+                        y2="75.4228"
+                        gradientUnits="userSpaceOnUse"
+                    >
+                        <stop stopColor="white" />
+                        <stop offset="1" stopColor="white" stopOpacity="0" />
+                    </linearGradient>
+                </defs>
+            </svg>
+            <div className="mx-6 flex flex-col z-10 ">
+                <div className="text-white py-14 mx-auto  z-10 inline-block max-w-max">
+                    <p className="font-bold w-fit text-center mx-auto text-4xl md:text-5xl lg:text-7xl">
+                        Our Project Have Been{" "}
+                        <span className="bg-gradient-to-l from-teal-600 to-green-500 text-transparent bg-clip-text">
+                        Done
+                        </span>
+                    </p>
+                    <p className="text-gray-200 max-w-[481px] text-center pt-4 text-sm px-3 md:max-w-[641px] lg:max-w-4xl md:text-lg lg:text-xl ">
+                        Take a look at some of our recent projects and see how we've helped other businesses elevate their brand and drive business growth.
                     </p>
                 </div>
-                <div className="flex flex-col h-[302px] mx-auto px-6 max-w-[877px] 975:h-[356px]">
-                    <div className="z-10">
-                        <p className="font-bold text-center text-4xl 425:text-5xl tracking-[-0.02em] w-fit  mx-auto leading-[44px] bg-gradient-to-l from-teal-600 to-green-500 text-transparent bg-clip-text 975:text-[72px] 975:pb-5">
-                            Smart Choices
-                        </p>
-                        <p className="font-bold  text-4xl 425:text-5xl tracking-[-0.02em] text-center leading-[44px] text-white 975:text-[72px] 975:pb-5">
-                            For Your Business Growth
-                        </p>
-                        <p className="text-center  text-sm text-[#B6B8BC] mt-[14px] 975:mx-auto 975:text-xl">
-                            We&apos;re a team of experienced designers,
-                            developers, and marketers, passionate about
-                            delivering exceptional digital solutions.
-                        </p>
-                    </div>
-                    <div className="flex z-10 bg-gradient-to-l from-teal-600 to-green-500 p-4 w-fit mx-auto mt-auto rounded-[100px] duration-150 transition-all md:hover:shadow-[0_0_30px_10px] cursor-pointer md:hover:shadow-cyan-500/50 md:hover:translate-x-2 ">
-                        <p className="text-white mr-2 text-lg ">Contact Us </p>
-                        <i className="fa-solid fa-arrow-right fa-md transition-all my-auto text-white"></i>
-                    </div>
-                </div>
-                
 
-            </ServerComponent>
-            <div className="absolute bottom-[-56px]">
-                <div className="bg-gradient-to-b from-white to-gray-900 w-[97vw] h-14 blur-3xl  opacity-50"></div>
+                <div className="bg-white rounded-xl  flex flex-col w-full min-[350px]:w-fit mx-auto z-10 min-[350px]:rounded-[100px] min-[350px]:p-1 min-[350px]:flex-row   max-[350px]:justify-around ">
+                    {jenisProject.map((item, index) => {
+                        return (
+                            <button
+                                onClick={() => setShowContent(index)}
+                                key={index}
+                                className={`min-[350px]:rounded-[100px] rounded-xl transition-all z-10 ${
+                                    showContent == index &&
+                                    "bg-gradient-to-l from-teal-600 to-green-500 text-white"
+                                } p-2 px-6 min-[350px]:w-fit md:w-[90px] lg:p-3 lg:w-[150px]`}
+                            >
+                                {item.title}
+                            </button>
+                        );
+                    })}
+                </div>
             </div>
+
+            <div className="mx-4 mt-9 z-10 grid grid-cols-1 lg:grid-cols-2 gap-3">
+                {jenisProject[showContent].content.map((item, index) => {
+                    return (
+                        <div
+                            key={index}
+                            className={`bg-gray-800 z-10 text-white p-2 h-[412px] mx-auto max-w-[598px] rounded-2xl`}
+                        >
+                            <div className="z-10 peer cursor-pointer">
+                                <Image
+                                    className="w-full h-[300px] z-10 max-h-[579px] object-cover rounded-2xl mx-auto"
+                                    src={item.url}
+                                    alt={item.alt}
+                                    width={200}
+                                    height={200}
+                                />
+                            </div>
+
+                            <p className="font-bold text-lg">{item.title}</p>
+                            <p className="text-gray-200">{item.desc}</p>
+                        </div>
+                    );
+                })}
+            </div>
+            
         </section>
     );
-};
+}
 
-export default dynamic(() => Promise.resolve(Hero), { ssr: false });
+export default dynamic(() => Promise.resolve(Project), { ssr: false });
