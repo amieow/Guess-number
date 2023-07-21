@@ -90,7 +90,6 @@ export default function Home() {
          dispatch({type : ACTION.BERHASIL_MENEBAK })
          return;
       }
-      console.log(jawaban)
       const between = Math.abs(Number(guessings) - jawaban)
       dispatch({ type: ACTION.GAGAL_MENEBAK, payload: { newMessage: WrongHandler(between,level) } });
    }
